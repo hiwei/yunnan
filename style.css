@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Ovo');
+@import url('https://fonts.googleapis.com/css?family=Assistant');
+@import url('https://fonts.googleapis.com/css?family=Assistant:300');
+
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0;
+	margin: 0;
+	background: #000;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	color: #fff;
+	font-family: Assistant;
+	font-weight: 300;
+	font-size: 16pt;
+	letter-spacing: 0.5px;
+}
+h2 {
+	font-size: 30pt;
+	font-family: Ovo;
+}
+p {
+	text-align: left;
+}
+/* Landing page */
+.landing {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 90pt;
+	background: #000;
+	font-weight: 700;
+	letter-spacing: 5pt;
+	color: #ddd;
+	background-image: url("img/bg.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* Wrapper */
+.erhai_wrapper {
+	padding-top: 130vh;
+	display: flex;
+	height: 40vh;
+}
+.pray_wrapper, .tlg_wrapper, .jigong_wrapper, .temple_wrapper {
+	padding-top: 60vh;
+	display: flex;
+	height: 40vh;
+}
+.erhai_wrapper a, .pray_wrapper a, .tlg_wrapper a, .jigong_wrapper a, .temple_wrapper a {
+	position: relative;
+	flex: 1;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	transition: flex .5s, color .5s 1s;
+	transform: translateZ(0);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.erhai, .pray, .tlg, .jigong, .temple {
+	opacity: 1;
+	background: #000;
+}
+.erhai.clicked, .pray.clicked, .tlg.clicked, .jigong.clicked, .temple.clicked {
+	flex: 0;	
+	opacity: 0;
+	color: rgba(0,0,0,0);
+	transition: flex 1s .5s, opacity .5s 1s;
+	transform: translateZ(0);
+}
+
+/* Video */
+video { 
+	position: absolute;
+	width: auto;
+	height: 40vh;
+//	background: url('img.png') no-repeat;
+}
+.v_erhai {
+	top: 130vh;
+	left: 5%;
+}
+.v_pray {
+	top: 230vh;
+	right: 11%;
+}
+.v_tlg {
+	top: 330vh;
+	left: 20%;
+}
+.v_jigong {
+	top: 430vh;
+	right: 9%;
+}
+.v_temple {
+	top: 530vh;
+	left: 21%;
+}
+/* Erhai */
+.erhai_box1 {
+	background-image: url(img/erhai_1.jpg);
+}
+.erhai_box3 {
+	background-image: url(img/erhai_2.jpg);
+}
+.erhai_box4 {
+	background-image: url(img/erhai_3.jpg);
+}
+.erhai_words {
+	position: absolute;
+	top: 138vh;
+	right: 15%;
+	width: 30%;
+	opacity: 1;
+	transition: opacity .5s 1s;
+	color: #ddd;
+}
+
+/* Pray */
+.pray_box1 {
+	background-image: url(img/pray_1.jpg);
+}
+.pray_box2 {
+	background-image: url(img/pray_2.jpg);
+}
+.pray_box4 {
+	background-image: url(img/pray_3.jpg);
+}
+.pray_words {
+	position: absolute;
+	top: 238vh;
+	left: 20%;
+	width: 20%;
+	opacity: 1;
+	transition: opacity .5s 1s;
+}
+
+/* Tiger Leaping Gorge */
+.tlg_box2 {
+	background-image: url(img/tlg_1.jpg);
+}
+.tlg_box4 {
+	background-image: url(img/tlg_2.jpg);
+}
+.tlg_box5 {
+	background-image: url(img/tlg_3.jpg);
+}
+.tlg_words {
+	position: absolute;
+	top: 340vh;
+	left: 47%;
+	width: 30%;
+	opacity: 1;
+	transition: opacity .5s 1s;
+}
+
+/* jigong */
+.jigong_box1 {
+	background-image: url(img/jigong_1.jpg);
+}
+.jigong_box2 {
+	background-image: url(img/jigong_2.jpg);
+}
+.jigong_box3 {
+	background-image: url(img/jigong_3.jpg);
+}
+.jigong_words {
+	position: absolute;
+	top: 438vh;
+	left: 8%;
+	width: 28%;
+	opacity: 1;
+	transition: opacity .5s 1s;
+}
+
+/* Temple */
+.temple_box1 {
+	background-image: url(img/temple_1.jpg);
+}
+.temple_box3 {
+	background-image: url(img/temple_2.jpg);
+}
+.temple_box4 {
+	background-image: url(img/temple_3.jpg);
+}
+.temple_words {
+	position: absolute;
+	top: 538vh;
+	right: 17%;
+	width: 23%;
+	opacity: 1;
+	transition: opacity .5s 1s;
+}
+
+.erhai_words.clicked, .pray_words.clicked, .tlg_words.clicked, .jigong_words.clicked, .temple_words.clicked {
+	opacity: 0;
+	transition: opacity .5s 0s;
+}
+
+/* hover : flex bigger*/
+.erhai_box2:hover, .pray_box3:hover, .tlg_box3:hover, .jigong_box4:hover, .temple_box2:hover {
+	flex: 1.2;
+	cursor: pointer;
+}
+.overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: background-color 2s;
+	transform: translateZ(0);
+}
+.erhai_box2 .overlay, .pray_box3 .overlay, .tlg_box3 .overlay, .jigong_box4 .overlay, .temple_box2 .overlay {
+	background-color: rgba(0, 0, 0, .7);
+}
+.erhai_box2 .overlay.clicked, .pray_box3 .overlay.clicked, .tlg_box3 .overlay.clicked, .jigong_box4 .overlay.clicked, .temple_box2 .overlay.clicked {
+	background-color: rgba(0, 0, 0, 0);
+	cursor: default;
+}
+/* X */
+.x {
+	display: none;
+	z-index: 99;
+	position: absolute;
+	position: fixed;
+	top: 10vh;
+	right: 12vh;
+	font-size: 30pt;
+	color: #fff;
+}
+.x:hover {
+	cursor: pointer;
+}
+
+/* Go to top */
+.totop {
+	height: 35vh;
+	width: 100%;
+	position: absolute;
+	top: 570vh;
+	text-align: center;
+	padding-top: 35vh;
+}
+.totop span {
+	color: #ccc;
+	font-size: 50pt;
+	transition: color .5s;
+}
+.totop span:hover {
+	cursor: pointer;
+	color: #eee;
+}
+
+.landing:hover, .erhai_words:hover, .pray_words:hover, .tlg_words:hover, .jigong_words:hover, .temple_words:hover {
+	cursor: default;
+}
+
+@media screen and (max-width: 1680px) {
+	body {
+		font-size: 14pt;
+	}
+	h2 {
+		font-size: 25pt;
+	}
+	.landing {
+		font-size: 80pt;
+	}
+	.x {
+		font-size: 25pt;
+	}
+	.totop span {
+		font-size: 44pt;
+	}
+}
+@media screen and (max-width: 1280px) {
+	body {
+		font-size: 12pt;
+	}
+	h2 {
+		font-size: 20pt;
+	}
+	.landing {
+		font-size: 65pt;
+	}
+	.x {
+		font-size: 20pt;
+	}
+	.totop span {
+		font-size: 40pt;
+	}
+}
+@media screen and (max-width: 1024px) {
+	body {
+		font-size: 10pt;
+	}
+	h2 {
+		font-size: 16pt;
+	}
+	.landing {
+		font-size: 50pt;
+	}
+	.x {
+		font-size: 16pt;
+	}
+	.totop span {
+		font-size: 35pt;
+	}
+}

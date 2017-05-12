@@ -1,0 +1,227 @@
+﻿<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="jquery.min.js"></script>
+</head>
+<script>
+
+$(document).ready(function(){
+	$('.totop').on('click', function() {
+		$('html, body').animate({ scrollTop: 0 }, 2000);
+	});	
+	$('.erhai_box').on('click',  function() {
+		var show_box = $(this).data('box');
+		$('.erhai').addClass('clicked');
+		$('.erhai_box' + show_box).addClass('clicked');
+		$('.erhai_box' + show_box + ' .overlay').addClass('clicked');
+		$('.erhai_words').addClass('clicked');
+		$('.x').delay(1000).fadeIn(1000);
+	});
+	$('.pray_box').on('click',  function() {
+		var show_box = $(this).data('box');
+		$('.pray').addClass('clicked');
+		$('.pray_box' + show_box).toggleClass('clicked');
+		$('.pray_box' + show_box + ' .overlay').addClass('clicked');
+		$('.pray_words').addClass('clicked');
+		$('.x').delay(1000).fadeIn(1000);
+	});
+	$('.tlg_box').on('click',  function() {
+		var show_box = $(this).data('box');
+		$('.tlg').addClass('clicked');
+		$('.tlg_box' + show_box).toggleClass('clicked');
+		$('.tlg_box' + show_box + ' .overlay').addClass('clicked');
+		$('.tlg_words').addClass('clicked');
+		$('.x').delay(1000).fadeIn(1000);
+	});
+	$('.jigong_box').on('click',  function() {
+		var show_box = $(this).data('box');
+		$('.jigong').addClass('clicked');
+		$('.jigong_box' + show_box).toggleClass('clicked');
+		$('.jigong_box' + show_box + ' .overlay').addClass('clicked');
+		$('.jigong_words').addClass('clicked');
+		$('.x').delay(1000).fadeIn(1000);
+	});
+	$('.temple_box').on('click',  function() {
+		var show_box = $(this).data('box');
+		$('.temple').addClass('clicked');
+		$('.temple_box' + show_box).toggleClass('clicked');
+		$('.temple_box' + show_box + ' .overlay').addClass('clicked');
+		$('.temple_words').addClass('clicked');
+		$('.x').delay(1000).fadeIn(1000);
+	});
+	
+	$('.x').on('click',  function() {
+		$(this).fadeOut(1000);
+		$('.erhai, .erhai_words, .pray, .pray_words, .tlg, .tlg_words, .jigong, .jigong_words, .temple, .temple_words').removeClass('clicked');
+		for (var i =0; i<7; i++) {
+			$('.erhai_box' + i + ' .overlay').removeClass('clicked');
+			$('.pray_box' + i + ' .overlay').removeClass('clicked');
+			$('.tlg_box' + i + ' .overlay').removeClass('clicked');
+			$('.jigong_box' + i + ' .overlay').removeClass('clicked');
+			$('.temple_box' + i + ' .overlay').removeClass('clicked');
+		}
+	});
+});
+
+</script>
+
+<body>
+<div class="landing">
+	Wander in Yunnan
+</div>
+<div class="erhai_wrapper">
+	<video class="v_erhai" preload="auto" poster="img/erhai_backup.jpg" playsinline autoplay muted loop>
+		<source src="erhai.mp4" type="video/mp4">
+	</video>
+	<a class="erhai erhai_box1" data-box="1">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="erhai_box erhai_box2" data-box="2">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="erhai erhai_box3" data-box="3">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="erhai erhai_box4" data-box="4">
+		<div class="overlay">
+
+		</div>
+	</a>
+	<a class="erhai erhai_box5" data-box="5">
+		<div class="overlay">
+		</div>
+	</a>
+</div>
+<div class="erhai_words">
+	<h2>Erhai Lake</h2>
+	<p>Winds of Xiaguan, flowers of Shangguan, snow of Mt. Cangshan, and the moon of Erhai Lake. Lying against Mt. Cangshan, Erhai Lake possesses great charms especially with a Moon Scene.</p>
+</div>
+			
+<div class="pray_wrapper">
+	<video class="v_pray" preload="auto" poster="img/pray_backup.jpg" playsinline autoplay muted loop>
+		<source src="pray.mp4" type="video/mp4">
+	</video>
+	<a class="pray pray_box1" data-box="1">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="pray pray_box2" data-box="2">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="pray_box pray_box3" data-box="3">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="pray pray_box4" data-box="4">
+		<div class="overlay">
+		</div>
+	</a>
+</div>
+<div class="pray_words">
+	<h2>Pray</h2>
+	<p>The concept of the prayer wheel is turning the wheel of Dharma. The biggest one is in Shangri-la, and everything seems peaceful here.</p>
+</div>			
+
+<div class="tlg_wrapper">
+	<video class="v_tlg" preload="auto" poster="img/tlg_backup.jpg" playsinline autoplay muted loop>
+		<source src="tlg.mp4" type="video/mp4">
+	</video>
+	<a class="tlg tlg_box1" data-box="1">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="tlg tlg_box2" data-box="2">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="tlg_box tlg_box3" data-box="3">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="tlg tlg_box4" data-box="4">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="tlg tlg_box5" data-box="5">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="tlg tlg_box6" data-box="6">
+		<div class="overlay">
+		</div>
+	</a>
+</div>
+<div class="tlg_words">
+	<h2>Tiger Leaping Gorge</h2>
+	<p>Legend says that in order to escape from a hunter, a tiger jumped across the river, hence the name.</p>
+</div>			
+
+
+<div class="jigong_wrapper">
+	<video class="v_jigong" preload="auto" poster="img/jigong_backup.jpg" playsinline autoplay muted loop>
+		<source src="jigong.mp4" type="video/mp4">
+	</video>
+	<a class="jigong jigong_box1" data-box="1">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="jigong jigong_box2" data-box="2">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="jigong jigong_box3" data-box="3">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="jigong_box jigong_box4" data-box="4">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="jigong jigong_box5" data-box="5">
+		<div class="overlay">
+		</div>
+	</a>
+</div>
+<div class="jigong_words">
+	<h2>Ji Gong Mountain</h2>
+	<p>When a famous writer first visited here, he said 'this place definitely is as marvelous as Grand Canyon.' And the lake next to it is just like a wonderland in the world.</p>
+</div>
+
+<div class="temple_wrapper">
+	<video class="v_temple" preload="auto" poster="img/temple_backup.jpg" playsinline autoplay muted loop>
+		<source src="temple.mp4" type="video/mp4">
+	</video>
+	<a class="temple temple_box1" data-box="1">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="temple_box temple_box2" data-box="2">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="temple temple_box3" data-box="3">
+		<div class="overlay">
+		</div>
+	</a>
+	<a class="temple temple_box4" data-box="4">
+		<div class="overlay">
+		</div>
+	</a>
+</div>
+<div class="temple_words">
+	<h2>Songzanlin</h2>
+	<p>In 1679, Dalai Lama chose this place by divination and become the uppermost public place in Yunnan. Annually, the Gedong Festival is celebrated here by the Tibetans.</p>
+</div>
+		
+<div class="x">╳</div>
+
+<div class="totop">
+	<span>▲</span>
+</div>
+</body>
+
+</html>
